@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Contador de toques</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <h1>Contador de toques</h1>
+    <span class="stat" id="rest"></span>
+  </header>
+
+  <div class="limit">
+    <label for="lim">Límite de toques</label>
+    <button class="step" id="minus" aria-label="Restar">−</button>
+    <input id="lim" type="number" inputmode="numeric" min="1" max="9999" value="45">
+    <button class="step" id="plus" aria-label="Sumar">+</button>
+  </div>
+
+  <div class="bar" aria-hidden="true"><i id="fill"></i></div>
+
+  <button class="pad" id="pad" aria-label="Tocar para contar">
+    <span class="n" id="count">0</span>
+    <span class="h">Tocá acá</span>
+  </button>
+
+  <button class="reset" id="reset">Reiniciar</button>
+
+  <div class="overlay" id="over" role="alert">
+    <div class="big">¡Listo!</div>
+    <p id="msg"></p>
+    <button id="again">Empezar de nuevo</button>
+  </div>
+
+  <script src="contador.js"></script>
+</body>
+
+</html>
